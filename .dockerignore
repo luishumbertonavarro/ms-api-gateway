@@ -1,0 +1,9 @@
+# Artefactos locales: si se copian, pisan el restore hecho dentro de la imagen (NETSDK1064).
+**/bin/
+**/obj/
+.git/
+.vs/
+.idea/
+**/*.user
+**/TestResults/
+pacts/

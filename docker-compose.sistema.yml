@@ -1,0 +1,16 @@
+# Sistema completo NUR-TRICENTER: infraestructura (Consul + RabbitMQ + Gateway) y los
+# 6 microservicios. Cada servicio conserva su propio docker-compose.yml en su repo
+# (con su base de datos propia); aquí solo se incluyen.
+#
+#   docker network create nurtricenter_net   (una sola vez; scripts/levantar.ps1 lo hace)
+#   docker compose -f docker-compose.sistema.yml up -d --build
+name: nurtricenter
+
+include:
+  - docker-compose.yml
+  - ../katering/ms-pacientes-evaluacion/docker-compose.yml
+  - ../katering/ms-produccion-alimentos/docker-compose.yml
+  - ../elvis/ms-contratos-facturacion-modulo2/docker-compose.yml
+  - ../elvis/ms-logistica-entrega-modulo4/docker-compose.yml
+  - ../luis/Repo-ms-catering/docker-compose.yml
+  - ../luis/Repo-ms-plan-nutricional/ms-plan-nutricional-docker-compose.yml

@@ -1,0 +1,22 @@
+# Build outputs
+bin/
+obj/
+
+# Archivos temporales de trabajo
+tmp_media/
+
+# Documentos del curso (no forman parte del código)
+DOCS/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Variables de entorno locales (nunca commitear)
+.env
+TestResults/ 
